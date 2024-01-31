@@ -1,0 +1,205 @@
+"Notes"	"Race"	"Race Code"	"Gender"	"Gender Code"	"Year"	"Year Code"	"ICD-10 113 Cause List"	"ICD-10 113 Cause List Code"	Deaths	Population	Crude Rate	Age Adjusted Rate
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1)"	"GR113-018"	2116	2445447	86.5	101.9
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1695	2445447	69.3	80.8
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of lip, oral cavity and pharynx (C00-C14)"	"GR113-020"	22	2445447	0.9	1.0
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of esophagus (C15)"	"GR113-021"	19	2445447	Unreliable	Unreliable
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of stomach (C16)"	"GR113-022"	37	2445447	1.5	1.8
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of colon, rectum and anus (C18-C21)"	"GR113-023"	167	2445447	6.8	8.1
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of liver and intrahepatic bile ducts (C22)"	"GR113-024"	104	2445447	4.3	4.7
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of pancreas (C25)"	"GR113-025"	129	2445447	5.3	6.3
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of trachea, bronchus and lung (C33-C34)"	"GR113-027"	374	2445447	15.3	17.9
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of breast (C50)"	"GR113-029"	212	2445447	8.7	10.1
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of cervix uteri (C53)"	"GR113-030"	31	2445447	1.3	1.4
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of corpus uteri and uterus, part unspecified (C54-C55)"	"GR113-031"	52	2445447	2.1	2.4
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of ovary (C56)"	"GR113-032"	84	2445447	3.4	3.9
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of kidney and renal pelvis (C64-C65)"	"GR113-034"	50	2445447	2.0	2.4
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of bladder (C67)"	"GR113-035"	21	2445447	0.9	1.0
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of meninges, brain and other parts of central nervous system (C70-C72)"	"GR113-036"	36	2445447	1.5	1.7
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of lymphoid, hematopoietic and related tissue (C81-C96)"	"GR113-037"	112	2445447	4.6	5.5
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Non-Hodgkin lymphoma (C82-C85)"	"GR113-039"	41	2445447	1.7	2.0
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Leukemia (C91-C95)"	"GR113-040"	41	2445447	1.7	2.0
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"Multiple myeloma and immunoproliferative neoplasms (C88,C90)"	"GR113-041"	30	2445447	1.2	1.5
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"All other and unspecified malignant neoplasms (C17,C23-C24,C26-C31,C37-C41,C44-C49,C51-C52,C57-C60,C62-C63,C66,C68-C69,C73-C80,C97)"	"GR113-043"	231	2445447	9.4	11.1
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"#In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)"	"GR113-044"	41	2445447	1.7	2.2
+	"American Indian or Alaska Native"	"1002-5"	"Female"	"F"	"2020 "	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	2116	2445447	86.5	101.9
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1)"	"GR113-018"	2577	2454038	105.0	145.6
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1931	2454038	78.7	107.6
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of lip, oral cavity and pharynx (C00-C14)"	"GR113-020"	41	2454038	1.7	1.9
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of esophagus (C15)"	"GR113-021"	65	2454038	2.6	3.5
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of stomach (C16)"	"GR113-022"	74	2454038	3.0	4.1
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of colon, rectum and anus (C18-C21)"	"GR113-023"	219	2454038	8.9	12.0
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of liver and intrahepatic bile ducts (C22)"	"GR113-024"	217	2454038	8.8	11.0
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of pancreas (C25)"	"GR113-025"	137	2454038	5.6	7.5
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of larynx (C32)"	"GR113-026"	19	2454038	Unreliable	Unreliable
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of trachea, bronchus and lung (C33-C34)"	"GR113-027"	410	2454038	16.7	23.0
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant melanoma of skin (C43)"	"GR113-028"	14	2454038	Unreliable	Unreliable
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of prostate (C61)"	"GR113-033"	153	2454038	6.2	10.6
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of kidney and renal pelvis (C64-C65)"	"GR113-034"	95	2454038	3.9	4.9
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of bladder (C67)"	"GR113-035"	45	2454038	1.8	2.9
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of meninges, brain and other parts of central nervous system (C70-C72)"	"GR113-036"	37	2454038	1.5	1.8
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of lymphoid, hematopoietic and related tissue (C81-C96)"	"GR113-037"	152	2454038	6.2	9.0
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Non-Hodgkin lymphoma (C82-C85)"	"GR113-039"	62	2454038	2.5	3.8
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Leukemia (C91-C95)"	"GR113-040"	59	2454038	2.4	3.4
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"Multiple myeloma and immunoproliferative neoplasms (C88,C90)"	"GR113-041"	29	2454038	1.2	1.6
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"All other and unspecified malignant neoplasms (C17,C23-C24,C26-C31,C37-C41,C44-C49,C51-C52,C57-C60,C62-C63,C66,C68-C69,C73-C80,C97)"	"GR113-043"	250	2454038	10.2	13.3
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"#In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)"	"GR113-044"	41	2454038	1.7	2.6
+	"American Indian or Alaska Native"	"1002-5"	"Male"	"M"	"2020 "	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	2577	2454038	105.0	145.6
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1)"	"GR113-018"	5643	11639232	48.5	45.3
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	10046	11639232	86.3	79.9
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of lip, oral cavity and pharynx (C00-C14)"	"GR113-020"	149	11639232	1.3	1.2
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of esophagus (C15)"	"GR113-021"	83	11639232	0.7	0.7
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of stomach (C16)"	"GR113-022"	393	11639232	3.4	3.2
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of colon, rectum and anus (C18-C21)"	"GR113-023"	941	11639232	8.1	7.5
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of liver and intrahepatic bile ducts (C22)"	"GR113-024"	604	11639232	5.2	4.9
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of pancreas (C25)"	"GR113-025"	866	11639232	7.4	7.0
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of larynx (C32)"	"GR113-026"	11	11639232	Unreliable	Unreliable
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of trachea, bronchus and lung (C33-C34)"	"GR113-027"	1815	11639232	15.6	14.5
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant melanoma of skin (C43)"	"GR113-028"	35	11639232	0.3	0.3
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of breast (C50)"	"GR113-029"	1442	11639232	12.4	11.3
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of cervix uteri (C53)"	"GR113-030"	215	11639232	1.8	1.7
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of corpus uteri and uterus, part unspecified (C54-C55)"	"GR113-031"	477	11639232	4.1	3.7
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of ovary (C56)"	"GR113-032"	551	11639232	4.7	4.3
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of kidney and renal pelvis (C64-C65)"	"GR113-034"	133	11639232	1.1	1.1
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of bladder (C67)"	"GR113-035"	97	11639232	0.8	0.8
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of meninges, brain and other parts of central nervous system (C70-C72)"	"GR113-036"	242	11639232	2.1	1.9
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of lymphoid, hematopoietic and related tissue (C81-C96)"	"GR113-037"	788	11639232	6.8	6.3
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Non-Hodgkin lymphoma (C82-C85)"	"GR113-039"	349	11639232	3.0	2.8
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Leukemia (C91-C95)"	"GR113-040"	285	11639232	2.4	2.3
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"Multiple myeloma and immunoproliferative neoplasms (C88,C90)"	"GR113-041"	143	11639232	1.2	1.1
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"All other and unspecified malignant neoplasms (C17,C23-C24,C26-C31,C37-C41,C44-C49,C51-C52,C57-C60,C62-C63,C66,C68-C69,C73-C80,C97)"	"GR113-043"	1204	11639232	10.3	9.6
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"#In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)"	"GR113-044"	222	11639232	1.9	1.8
+	"Asian or Pacific Islander"	"A-PI"	"Female"	"F"	"2020 "	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	5643	11639232	48.5	45.3
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1)"	"GR113-018"	8269	10774505	76.7	86.9
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	10121	10774505	93.9	104.8
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of lip, oral cavity and pharynx (C00-C14)"	"GR113-020"	293	10774505	2.7	2.9
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of esophagus (C15)"	"GR113-021"	252	10774505	2.3	2.5
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of stomach (C16)"	"GR113-022"	515	10774505	4.8	5.3
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of colon, rectum and anus (C18-C21)"	"GR113-023"	1045	10774505	9.7	10.5
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of liver and intrahepatic bile ducts (C22)"	"GR113-024"	1158	10774505	10.7	11.7
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of pancreas (C25)"	"GR113-025"	785	10774505	7.3	8.1
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of larynx (C32)"	"GR113-026"	50	10774505	0.5	0.5
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of trachea, bronchus and lung (C33-C34)"	"GR113-027"	2254	10774505	20.9	23.4
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant melanoma of skin (C43)"	"GR113-028"	40	10774505	0.4	0.4
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of breast (C50)"	"GR113-029"	11	10774505	Unreliable	Unreliable
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of prostate (C61)"	"GR113-033"	769	10774505	7.1	8.8
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of kidney and renal pelvis (C64-C65)"	"GR113-034"	234	10774505	2.2	2.4
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of bladder (C67)"	"GR113-035"	255	10774505	2.4	2.9
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of meninges, brain and other parts of central nervous system (C70-C72)"	"GR113-036"	317	10774505	2.9	3.1
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of lymphoid, hematopoietic and related tissue (C81-C96)"	"GR113-037"	987	10774505	9.2	10.5
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Non-Hodgkin lymphoma (C82-C85)"	"GR113-039"	400	10774505	3.7	4.2
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Leukemia (C91-C95)"	"GR113-040"	387	10774505	3.6	4.1
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"Multiple myeloma and immunoproliferative neoplasms (C88,C90)"	"GR113-041"	191	10774505	1.8	2.1
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"All other and unspecified malignant neoplasms (C17,C23-C24,C26-C31,C37-C41,C44-C49,C51-C52,C57-C60,C62-C63,C66,C68-C69,C73-C80,C97)"	"GR113-043"	1156	10774505	10.7	11.8
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"#In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)"	"GR113-044"	275	10774505	2.6	3.0
+	"Asian or Pacific Islander"	"A-PI"	"Male"	"M"	"2020 "	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	8269	10774505	76.7	86.9
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1)"	"GR113-018"	27137	24514353	110.7	108.6
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	35716	24514353	145.7	138.4
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of lip, oral cavity and pharynx (C00-C14)"	"GR113-020"	304	24514353	1.2	1.1
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of esophagus (C15)"	"GR113-021"	379	24514353	1.5	1.4
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of stomach (C16)"	"GR113-022"	831	24514353	3.4	3.3
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of colon, rectum and anus (C18-C21)"	"GR113-023"	3323	24514353	13.6	13.0
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of liver and intrahepatic bile ducts (C22)"	"GR113-024"	1176	24514353	4.8	4.4
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of pancreas (C25)"	"GR113-025"	3052	24514353	12.4	11.8
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of larynx (C32)"	"GR113-026"	110	24514353	0.4	0.4
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of trachea, bronchus and lung (C33-C34)"	"GR113-027"	6335	24514353	25.8	24.2
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant melanoma of skin (C43)"	"GR113-028"	68	24514353	0.3	0.3
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of breast (C50)"	"GR113-029"	6500	24514353	26.5	25.4
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of cervix uteri (C53)"	"GR113-030"	781	24514353	3.2	3.1
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of corpus uteri and uterus, part unspecified (C54-C55)"	"GR113-031"	2421	24514353	9.9	9.0
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of ovary (C56)"	"GR113-032"	1383	24514353	5.6	5.3
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of kidney and renal pelvis (C64-C65)"	"GR113-034"	542	24514353	2.2	2.1
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of bladder (C67)"	"GR113-035"	512	24514353	2.1	2.0
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of meninges, brain and other parts of central nervous system (C70-C72)"	"GR113-036"	598	24514353	2.4	2.3
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of lymphoid, hematopoietic and related tissue (C81-C96)"	"GR113-037"	2849	24514353	11.6	11.4
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Hodgkin disease (C81)"	"GR113-038"	40	24514353	0.2	0.2
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Non-Hodgkin lymphoma (C82-C85)"	"GR113-039"	659	24514353	2.7	2.6
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Leukemia (C91-C95)"	"GR113-040"	939	24514353	3.8	3.7
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Multiple myeloma and immunoproliferative neoplasms (C88,C90)"	"GR113-041"	1207	24514353	4.9	4.8
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"All other and unspecified malignant neoplasms (C17,C23-C24,C26-C31,C37-C41,C44-C49,C51-C52,C57-C60,C62-C63,C66,C68-C69,C73-C80,C97)"	"GR113-043"	4552	24514353	18.6	17.7
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"#In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)"	"GR113-044"	846	24514353	3.5	3.4
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Other acute lower respiratory infections (J20-J22,U04)"	"GR113-079"	10	24514353	Unreliable	Unreliable
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"Other and unspecified acute lower respiratory infections (J22,U04)"	"GR113-081"	10	24514353	Unreliable	Unreliable
+	"Black or African American"	"2054-5"	"Female"	"F"	"2020 "	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	27137	24514353	110.7	108.6
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1)"	"GR113-018"	30864	22666892	136.2	179.9
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	36163	22666892	159.5	198.3
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of lip, oral cavity and pharynx (C00-C14)"	"GR113-020"	790	22666892	3.5	4.0
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of esophagus (C15)"	"GR113-021"	851	22666892	3.8	4.3
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of stomach (C16)"	"GR113-022"	1162	22666892	5.1	6.4
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of colon, rectum and anus (C18-C21)"	"GR113-023"	3997	22666892	17.6	21.2
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of liver and intrahepatic bile ducts (C22)"	"GR113-024"	2423	22666892	10.7	11.8
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of pancreas (C25)"	"GR113-025"	2772	22666892	12.2	14.5
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of larynx (C32)"	"GR113-026"	499	22666892	2.2	2.7
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of trachea, bronchus and lung (C33-C34)"	"GR113-027"	8203	22666892	36.2	44.1
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant melanoma of skin (C43)"	"GR113-028"	56	22666892	0.2	0.3
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of breast (C50)"	"GR113-029"	91	22666892	0.4	0.5
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of prostate (C61)"	"GR113-033"	5602	22666892	24.7	35.4
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of kidney and renal pelvis (C64-C65)"	"GR113-034"	930	22666892	4.1	4.9
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of bladder (C67)"	"GR113-035"	769	22666892	3.4	4.6
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of meninges, brain and other parts of central nervous system (C70-C72)"	"GR113-036"	696	22666892	3.1	3.5
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of lymphoid, hematopoietic and related tissue (C81-C96)"	"GR113-037"	3259	22666892	14.4	18.3
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Hodgkin disease (C81)"	"GR113-038"	55	22666892	0.2	0.3
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Non-Hodgkin lymphoma (C82-C85)"	"GR113-039"	860	22666892	3.8	4.6
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Leukemia (C91-C95)"	"GR113-040"	1168	22666892	5.2	6.5
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Multiple myeloma and immunoproliferative neoplasms (C88,C90)"	"GR113-041"	1166	22666892	5.1	6.8
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"Other and unspecified malignant neoplasms of lymphoid, hematopoietic and related tissue (C96)"	"GR113-042"	10	22666892	Unreliable	Unreliable
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"All other and unspecified malignant neoplasms (C17,C23-C24,C26-C31,C37-C41,C44-C49,C51-C52,C57-C60,C62-C63,C66,C68-C69,C73-C80,C97)"	"GR113-043"	4063	22666892	17.9	21.9
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"#In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)"	"GR113-044"	721	22666892	3.2	4.3
+	"Black or African American"	"2054-5"	"Male"	"M"	"2020 "	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	30864	22666892	136.2	179.9
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1)"	"GR113-018"	123423	128628889	96.0	61.6
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	237162	128628889	184.4	125.8
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of lip, oral cavity and pharynx (C00-C14)"	"GR113-020"	2751	128628889	2.1	1.5
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of esophagus (C15)"	"GR113-021"	2689	128628889	2.1	1.4
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of stomach (C16)"	"GR113-022"	3309	128628889	2.6	1.8
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of colon, rectum and anus (C18-C21)"	"GR113-023"	20152	128628889	15.7	10.8
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of liver and intrahepatic bile ducts (C22)"	"GR113-024"	7707	128628889	6.0	4.0
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of pancreas (C25)"	"GR113-025"	18448	128628889	14.3	9.5
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of larynx (C32)"	"GR113-026"	623	128628889	0.5	0.3
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of trachea, bronchus and lung (C33-C34)"	"GR113-027"	54637	128628889	42.5	28.2
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant melanoma of skin (C43)"	"GR113-028"	2730	128628889	2.1	1.5
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of breast (C50)"	"GR113-029"	34121	128628889	26.5	18.7
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of cervix uteri (C53)"	"GR113-030"	3245	128628889	2.5	2.1
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of corpus uteri and uterus, part unspecified (C54-C55)"	"GR113-031"	9045	128628889	7.0	4.7
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of ovary (C56)"	"GR113-032"	11420	128628889	8.9	6.1
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of kidney and renal pelvis (C64-C65)"	"GR113-034"	4175	128628889	3.2	2.2
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasm of bladder (C67)"	"GR113-035"	3988	128628889	3.1	2.0
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of meninges, brain and other parts of central nervous system (C70-C72)"	"GR113-036"	6944	128628889	5.4	3.9
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Malignant neoplasms of lymphoid, hematopoietic and related tissue (C81-C96)"	"GR113-037"	20825	128628889	16.2	10.9
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Hodgkin disease (C81)"	"GR113-038"	361	128628889	0.3	0.2
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Non-Hodgkin lymphoma (C82-C85)"	"GR113-039"	7531	128628889	5.9	3.9
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Leukemia (C91-C95)"	"GR113-040"	8470	128628889	6.6	4.5
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Multiple myeloma and immunoproliferative neoplasms (C88,C90)"	"GR113-041"	4404	128628889	3.4	2.3
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Other and unspecified malignant neoplasms of lymphoid, hematopoietic and related tissue (C96)"	"GR113-042"	59	128628889	0.0	0.0
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"All other and unspecified malignant neoplasms (C17,C23-C24,C26-C31,C37-C41,C44-C49,C51-C52,C57-C60,C62-C63,C66,C68-C69,C73-C80,C97)"	"GR113-043"	30353	128628889	23.6	16.0
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"#In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)"	"GR113-044"	6446	128628889	5.0	3.3
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Other acute lower respiratory infections (J20-J22,U04)"	"GR113-079"	12	128628889	Unreliable	Unreliable
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"Other and unspecified acute lower respiratory infections (J22,U04)"	"GR113-081"	12	128628889	Unreliable	Unreliable
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"#Pneumoconioses and chemical effects (J60-J66,J68,U07.0)"	"GR113-087"	15	128628889	Unreliable	Unreliable
+	"White"	"2106-3"	"Female"	"F"	"2020 "	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	123423	128628889	96.0	61.6
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1)"	"GR113-018"	150802	126360767	119.3	100.3
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	269516	126360767	213.3	171.7
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of lip, oral cavity and pharynx (C00-C14)"	"GR113-020"	6485	126360767	5.1	4.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of esophagus (C15)"	"GR113-021"	11335	126360767	9.0	7.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of stomach (C16)"	"GR113-022"	4912	126360767	3.9	3.2
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of colon, rectum and anus (C18-C21)"	"GR113-023"	23251	126360767	18.4	15.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of liver and intrahepatic bile ducts (C22)"	"GR113-024"	14838	126360767	11.7	9.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of pancreas (C25)"	"GR113-025"	20585	126360767	16.3	12.8
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of larynx (C32)"	"GR113-026"	2486	126360767	2.0	1.5
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of trachea, bronchus and lung (C33-C34)"	"GR113-027"	62138	126360767	49.2	38.4
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant melanoma of skin (C43)"	"GR113-028"	5265	126360767	4.2	3.4
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of breast (C50)"	"GR113-029"	385	126360767	0.3	0.2
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of prostate (C61)"	"GR113-033"	26183	126360767	20.7	17.4
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of kidney and renal pelvis (C64-C65)"	"GR113-034"	8282	126360767	6.6	5.3
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasm of bladder (C67)"	"GR113-035"	10995	126360767	8.7	7.3
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of meninges, brain and other parts of central nervous system (C70-C72)"	"GR113-036"	9164	126360767	7.3	6.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Malignant neoplasms of lymphoid, hematopoietic and related tissue (C81-C96)"	"GR113-037"	28770	126360767	22.8	18.9
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Hodgkin disease (C81)"	"GR113-038"	536	126360767	0.4	0.3
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Non-Hodgkin lymphoma (C82-C85)"	"GR113-039"	10269	126360767	8.1	6.7
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Leukemia (C91-C95)"	"GR113-040"	12073	126360767	9.6	8.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Multiple myeloma and immunoproliferative neoplasms (C88,C90)"	"GR113-041"	5829	126360767	4.6	3.8
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Other and unspecified malignant neoplasms of lymphoid, hematopoietic and related tissue (C96)"	"GR113-042"	63	126360767	0.0	0.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"All other and unspecified malignant neoplasms (C17,C23-C24,C26-C31,C37-C41,C44-C49,C51-C52,C57-C60,C62-C63,C66,C68-C69,C73-C80,C97)"	"GR113-043"	34442	126360767	27.3	22.3
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"#In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)"	"GR113-044"	7637	126360767	6.0	5.1
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Other acute lower respiratory infections (J20-J22,U04)"	"GR113-079"	21	126360767	0.0	0.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"Other and unspecified acute lower respiratory infections (J22,U04)"	"GR113-081"	21	126360767	0.0	0.0
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"#Pneumoconioses and chemical effects (J60-J66,J68,U07.0)"	"GR113-087"	18	126360767	Unreliable	Unreliable
+	"White"	"2106-3"	"Male"	"M"	"2020 "	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	150802	126360767	119.3	100.3
