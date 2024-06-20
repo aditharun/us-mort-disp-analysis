@@ -36,8 +36,13 @@ overall_ageadj_changes <- overall_ageadj_changes %>% mutate(plateau_F = ifelse(g
 cpal <- c("#374e55", "#df8f44")
 
 #covid contribution in 2020
-overall_ageadj_changes %>% select(year, excess_deaths_rate, gender) %>% filter(year >= 2019) %>% group_by(gender) %>% summarize(diff = excess_deaths_rate[year==2020] - excess_deaths_rate[year==2019]) %>% mutate(covid_aamr_excess = c(47, 79.6))
+
+covid_aamrs <- covid_aamrs %>% group_by(Gender) %>% summarize(m = as.numeric(`Age Adjusted Rate`)[Race == "Black or African American"] - as.numeric(`Age Adjusted Rate`)[Race == "White"])
+
+overall_ageadj_changes %>% select(year, excess_deaths_rate, gender) %>% filter(year >= 2019) %>% group_by(gender) %>% summarize(diff = excess_deaths_rate[year==2020] - excess_deaths_rate[year==2019]) %>% left_join(covid_aamrs, by = c("gender" = "Gender")) %>% mutate(pct = m / diff)
+
 #went up by 101.9 for females and 185.3 for males from 2019 - 2020
+
 #covid accounts for 46.1% for females and 43.2% for males of this jump
 
 

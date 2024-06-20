@@ -72,7 +72,7 @@ df <- df %>% select(-ovr_change) %>% rbind(tail_change)
 
 ### Figure 1
 
-name_map <- data.frame(name = ageadj %>% pull(name) %>% unique(), new_name = c("Accidents", "Alzheimer's", "Assault", "Cerebrovascular\nDiseases", "Perinatal Period\nConditions", "Chronic Liver\nDisease and Cirrhosis", "Chronic Lower\nRespiratory Diseases", "Diabetes", "Heart Diease", "Hypertension", "HIV", "Influenza\nand Pneumonia", "Suicide", "Cancer", "Nephritis", "Parkinson's", "Pneumonitis due to\nSolids and Liquids", "Septicemia")) %>% as_tibble()
+name_map <- data.frame(name = ageadj %>% pull(name) %>% unique(), new_name = c("Accidents", "Alzheimer's", "Assault", "Cerebrovascular\nDiseases", "Perinatal Period\nConditions", "Chronic Liver\nDisease and Cirrhosis", "Chronic Lower\nRespiratory Diseases", "Diabetes", "Heart Disease", "Hypertension", "HIV", "Influenza\nand Pneumonia", "Suicide", "Cancer", "Nephritis", "Parkinson's", "Pneumonitis due to\nSolids and Liquids", "Septicemia")) %>% as_tibble()
 
 ageadj <- ageadj %>% left_join(name_map, by=c("name"="name")) %>% select(-name) %>% magrittr::set_colnames(c("year", "gender", "unadj_excess_num", "ageadj_excess", "name"))
 
@@ -136,37 +136,38 @@ bottom_half_fig1 <- plot_grid(fig1d_new, ggplot() + theme_void(), fig1e_new, nro
 
 plot_grid(top_half_fig1, bottom_half_fig1, nrow = 2, ncol = 1, rel_heights = c(0.3, 1)) %>% ggsave(filename = "results/decline-fig1.pdf", plot = ., device = cairo_pdf, height = 20, width = 15, units = "in")
 
+ggsave(plot = top_half_fig1, filename = "results/decline-fig1-nod-e.pdf", device = cairo_pdf, height  = 6, width = 15)
 ######## HEATMAP ########
 
 
 
 
-mat <- df %>% select(year, gender, name, change) %>% filter(year > 1999)
+#mat <- df %>% select(year, gender, name, change) %>% filter(year > 1999)
 
 
-m_mat <- mat %>% filter(gender == "Male") %>% group_by(year) %>% mutate(rank = rank(change, ties.method = "first")) %>% ungroup() 
+#m_mat <- mat %>% filter(gender == "Male") %>% group_by(year) %>% mutate(rank = rank(change, ties.method = "first")) %>% ungroup() 
 
 #order rows by name
-order.names.heatmap <- m_mat %>% filter(year < 2012) %>% group_by(name) %>% summarize(m = median(rank)) %>% arrange(desc(m)) %>% pull(name)
+#order.names.heatmap <- m_mat %>% filter(year < 2012) %>% group_by(name) %>% summarize(m = median(rank)) %>% arrange(desc(m)) %>% pull(name)
 
-m_mat <- m_mat %>% mutate(name = factor(name, levels = order.names.heatmap))
+#m_mat <- m_mat %>% mutate(name = factor(name, levels = order.names.heatmap))
 
-m_mat %>% ggplot( aes(x = year, y = name, fill = rank)) +
-  geom_tile(color = "white") +  # Add tiles with white borders
-  geom_text(aes(label = rank), color = "black") +  # Add text labels 
-  labs(title = "Heatmap of Conditions by Year",
-       x = "Year", y = "Condition") +
-  scale_fill_gradient(low = "black", high = "white") + 
-  theme_minimal(base_size = 12) +  # Minimalist theme with adjusted base font size
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))  # Rotate x-axis text for better readability
+#m_mat %>% ggplot( aes(x = year, y = name, fill = rank)) +
+  #geom_tile(color = "white") +  # Add tiles with white borders
+  #geom_text(aes(label = rank), color = "black") +  # Add text labels 
+  #labs(title = "Heatmap of Conditions by Year",
+  #     x = "Year", y = "Condition") +
+  #scale_fill_gradient(low = "black", high = "white") + 
+  #theme_minimal(base_size = 12) +  # Minimalist theme with adjusted base font size
+  #theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))  # Rotate x-axis text for better readability
 
- scale_fill_manual(values = c("lightblue", "salmon"), 
-                    labels = c("1", "2"), 
-                    name = "Ordinal Value") +  # Custom colors and labels for the fill scale
+ #scale_fill_manual(values = c("lightblue", "salmon"), 
+                    #labels = c("1", "2"), 
+                    #name = "Ordinal Value") +  # Custom colors and labels for the fill scale
 
 
 
-mat %>% filter(gender == "Male") %>% mutate(plateau = ifelse(year <= 2011, "Decline", "Non-decline")) %>% ggplot(aes(x=plateau, y=change)) + geom_boxplot() + facet_wrap(~name, scales = "free") + geom_jitter(width = 0.1)
+#mat %>% filter(gender == "Male") %>% mutate(plateau = ifelse(year <= 2011, "Decline", "Non-decline")) %>% ggplot(aes(x=plateau, y=change)) + geom_boxplot() + facet_wrap(~name, scales = "free") + geom_jitter(width = 0.1)
 
 
 
@@ -233,21 +234,37 @@ m_avg_rate %>% group_by(name) %>% summarize(diff = slope[plateau != "Decline"] -
 
 
 ###
+m_pct_change <- m_avg_rate %>% group_by(name) %>% summarize(abs_change = (slope[plateau=="Non-decline"] - slope[plateau == "Decline"]), change = (slope[plateau=="Non-decline"] - slope[plateau == "Decline"]) / abs(slope[plateau == "Decline"]) ) %>% mutate(pct_change = round(change*100, 2)) %>% arrange(desc(pct_change)) 
+
+mpct_fig <- m_pct_change %>% mutate(name = factor(name, levels = rev(m_pct_change$name))) %>% ggplot(aes(y=name, x=pct_change)) + geom_bar(stat = "identity", alpha = 0.8, color = "grey50", fill = "grey50") + theme_minimal() + theme(panel.border = element_rect(color = "black", fill = "transparent"), panel.grid = element_blank()) + theme(panel.grid.major.y = element_line(color = "grey90", linetype = "dashed", linewidth = 0.5)) + ggtitle("Males") + theme(plot.title = element_text(size = 14, hjust = 0.5)) + theme(legend.position = "bottom") + theme(axis.text = element_text(size = 12), axis.title = element_text(size = 14), legend.text = element_text(size = 12)) + scale_x_continuous(breaks = scales::pretty_breaks(n = 10), limits = c(-100, 700)) + xlab("Change in Average Excess AAMR\nFrom Decline to Non-Decline Period (%)") + theme(axis.ticks.x = element_line(color = "black")) + geom_vline(xintercept = 0, color = "grey70", linetype = "dashed") + ylab("")
+
+f_pct_change <- f_avg_rate %>% group_by(name) %>% summarize(abs_change = (slope[plateau=="Non-decline"] - slope[plateau == "Decline"]), change = (slope[plateau=="Non-decline"] - slope[plateau == "Decline"]) / abs(slope[plateau == "Decline"]) ) %>% mutate(pct_change = round(change*100, 2)) %>% arrange(desc(pct_change)) 
+
+fpct_fig <- f_pct_change %>% mutate(name = factor(name, levels = rev(f_pct_change$name))) %>% ggplot(aes(y=name, x=pct_change)) + geom_bar(stat = "identity", alpha = 0.8, color = "grey50", fill = "grey50") + theme_minimal() + theme(panel.border = element_rect(color = "black", fill = "transparent"), panel.grid = element_blank()) + theme(panel.grid.major.y = element_line(color = "grey90", linetype = "dashed", linewidth = 0.5)) + ggtitle("Females") + theme(plot.title = element_text(size = 14, hjust = 0.5)) + theme(legend.position = "bottom") + theme(axis.text = element_text(size = 12), axis.title = element_text(size = 14), legend.text = element_text(size = 12)) + scale_x_continuous(breaks = scales::pretty_breaks(n = 10), limits = c(-400, 600)) + xlab("Change in Average Excess AAMR\nFrom Decline to Non-Decline Periods (%)") + theme(axis.ticks.x = element_line(color = "black")) + geom_vline(xintercept = 0, color = "grey70", linetype = "dashed") + ylab("")
+
+fig3 <- cowplot::plot_grid(mpct_fig, fpct_fig, nrow = 1, labels = c("A", "B"), label_size = 20) #%>%
+#ggsave(filename = "results/decline-osr-fig3.pdf", plot = ., device = cairo_pdf, height = 10, width = 15, units = "in")
 
 
+m_avg_rate <- m_avg_rate %>% left_join(m_pct_change) %>% mutate(pct_change = round(pct_change, 0), abs_change = round(abs_change, 2))
+
+f_avg_rate <- f_avg_rate %>% left_join(f_pct_change) %>% mutate(pct_change = round(pct_change, 0), abs_change = round(abs_change, 2))
 
 fig2a <- m_avg_rate  %>% ggplot( aes(y = name, x = slope, fill = plateau)) +
     geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.75) +
-    labs(y = "", x = "Average Change in Excess AAMR", fill = "") +   geom_errorbar(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.8), width = 0.2, color = "grey60", size = 0.55) +
+    labs(y = "", x = "Average Change in Annual Excess AAMR", fill = "") +   geom_errorbar(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.8), width = 0.2, color = "grey60", size = 0.55) + geom_text(aes(y=name, x=4, label = paste0("(", abs_change, ", ", pct_change, "%)")), size = 3.5) + 
     theme_minimal() + theme(panel.border = element_rect(color = "black", fill = "transparent"), panel.grid = element_blank()) + geom_vline(xintercept = 0, color = "grey30") + theme(panel.grid.major.y = element_line(color = "grey90", linetype = "dashed", linewidth = 0.5)) + scale_fill_manual(values = c("Decline" = cpal[1], "Non-decline" = cpal[2]), labels = c("Decline" = "Overall Excess AAMR Decline (1999-2011)", "Non-decline" = "No Decline (2012-2019)"), guide = guide_legend(nrow = 2)) + ggtitle("Males") + theme(plot.title = element_text(size = 14, hjust = 0.5)) + theme(legend.position = "bottom") + theme(axis.text = element_text(size = 12), axis.title = element_text(size = 14), legend.text = element_text(size = 12)) + xlim(-5, 5)
 
 fig2b <- f_avg_rate %>% ggplot( aes(y = name, x = slope, fill = plateau)) +
     geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.75) +
-    labs(y = "", x = "Average Change in Excess AAMR", fill = "") +   geom_errorbar(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.8), width = 0.2, color = "grey60", size = 0.55) +
+    labs(y = "", x = "Average Change in Annual Excess AAMR", fill = "") +   geom_errorbar(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.8), width = 0.2, color = "grey60", size = 0.55) + geom_text(aes(y=name, x=4, label = paste0("(", abs_change, ", ", pct_change, "%)")), size = 3.5) + 
     theme_minimal() + theme(panel.border = element_rect(color = "black", fill = "transparent"), panel.grid = element_blank()) + geom_vline(xintercept = 0, color = "grey30") + theme(panel.grid.major.y = element_line(color = "grey90", linetype = "dashed", linewidth = 0.5)) + scale_fill_manual(values = c("Decline" = cpal[1], "Non-decline" = cpal[2]), labels = c("Decline" = "Overall Excess AAMR Decline (1999-2015)", "Non-decline" = "No Decline (2016-2019)"), guide = guide_legend(nrow = 2)) + ggtitle("Females") + theme(plot.title = element_text(size = 14, hjust = 0.5)) + theme(legend.position = "bottom") + theme(axis.text = element_text(size = 12), axis.title = element_text(size = 14), legend.text = element_text(size = 12)) + xlim(-5, 5)
 
 fig2 <- plot_grid(fig2a, fig2b, nrow = 1, labels = c("A", "B"), label_size = 20)
 
+cowplot::plot_grid(fig2a, fig2b, nrow = 1, labels = c("A", "B"), label_size = 18) %>% ggsave(plot = ., filename = "results/decline-fig2.pdf", device = cairo_pdf, height = 9, width = 15)
+
+#cowplot::plot_grid(fig2a, cowplot::plot_grid(mpct_fig, NULL, labels = c("B", ""), label_size = 18, rel_heights = c(1, 0.07), nrow = 2), fig2b, cowplot::plot_grid(fpct_fig, NULL, labels = c("D", ""), label_size = 18, rel_heights = c(1, 0.1), nrow = 2), nrow = 2, ncol = 2, labels = c("A", "", "C", ""), label_size = 18) %>% ggsave(plot = ., filename = "results/decline-fig2.pdf", device = cairo_pdf, height = 18, width = 15, units = "in")
 
 
-fig2 %>% ggsave(filename = "results/decline-fig2.pdf", plot = ., device = cairo_pdf, height = 10, width = 15, units = "in")
+#fig2 %>% ggsave(filename = "results/decline-fig2.pdf", plot = ., device = cairo_pdf, height = 10, width = 15, units = "in")
