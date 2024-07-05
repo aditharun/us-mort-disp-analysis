@@ -124,26 +124,25 @@ ggsave(plot = top_half_fig1, filename = "results/decline-fig1.pdf", device = cai
 
 
 
-
-
 avg_change <- rbind(ageadj %>% select(year, gender, ageadj_excess, name), ageadj %>% select(year, gender, ageadj_excess, name) %>% left_join(overall_ageadj_changes %>% select(gender, year, excess_deaths_rate), by=c("gender"="gender", "year"="year")) %>% group_by(year, gender) %>% summarize(nc = sum(ageadj_excess), t = unique(excess_deaths_rate)) %>% ungroup() %>% mutate(Tail = t - nc) %>% select(year, gender, Tail) %>% mutate(name = "Tail") %>% magrittr::set_colnames(c("year", "gender", "ageadj_excess", "name"))) 
 
 
 ###
-#
+#For females, significant mean annual reductions were seen in heart disease (4.5%), diabetes (3.3%), cancer (3.7%), accidents (38.1%), and cerebrovascular diseases (2.7%) (Fig. 2B). 
 
-of <- overall_ageadj_changes %>% filter(gender == "Female") %>% filter(year < 2016) %>% select(year, change) %>% filter(year > 1999)
+avg_change %>% filter(gender == "Female") %>% filter(year < 2016) %>% group_by(name) %>% arrange(year) %>% mutate(pct_yoy_change_mag = ((abs(ageadj_excess - lag(ageadj_excess))) / abs(lag(ageadj_excess))) * 100, direction = sign(ageadj_excess - lag(ageadj_excess)), change = ageadj_excess - lag(ageadj_excess), pct_yoy_change = pct_yoy_change_mag * direction) %>% ungroup() %>% filter(year > 1999) %>% group_by(name) %>% summarize(mean_pct_yoy_change = mean(ifelse(!is.finite(pct_yoy_change), NA, pct_yoy_change), na.rm = T) %>% round(., 2)) %>% ungroup() %>% arrange(desc(abs(mean_pct_yoy_change)))
 
-avg_change %>% filter(gender == "Female") %>% filter(year < 2016) %>% group_by(name) %>% arrange(year) %>% mutate(change_specific = ageadj_excess - lag(ageadj_excess)) %>% ungroup() %>% filter(year > 1999) %>% left_join(of, by=c("year" = "year")) %>% mutate(frac = change_specific / change) %>% group_by(name) %>% summarize(pct = round(mean(frac)*100, 2)) %>% arrange(desc(pct))
+
+
 
 ###
 
 ###
-#mean annual changes in excess AAMR revealed that cancer (-3.97, 23.1%), heart disease (-2.20, 23%), accidents (-1.91), and HIV (-1.62) were primary contributors to this decline
-#
-om <- overall_ageadj_changes %>% filter(gender == "Male") %>% filter(year < 2012) %>% select(year, change) %>% filter(year > 1999)
+#Notably, among males, mean annual changes in excess AAMR revealed that cancer (5.3% mean annual excess AAMR change), heart disease (3.5%), accidents (60.5%), and HIV (7.0%) were primary contributors to this decline (Fig. 2A)
 
-avg_change %>% filter(gender == "Male") %>% filter(year < 2012) %>% group_by(name) %>% arrange(year) %>% mutate(change_specific = ageadj_excess - lag(ageadj_excess)) %>% ungroup() %>% filter(year > 1999) %>% left_join(om, by=c("year" = "year")) %>% mutate(frac = change_specific / change) %>% group_by(name) %>% summarize(pct = round(mean(frac)*100, 2)) %>% arrange(desc(pct))
+avg_change %>% filter(gender == "Male") %>% filter(year < 2012) %>% group_by(name) %>% arrange(year) %>% mutate(pct_yoy_change_mag = ((abs(ageadj_excess - lag(ageadj_excess))) / abs(lag(ageadj_excess))) * 100, direction = sign(ageadj_excess - lag(ageadj_excess)), change = ageadj_excess - lag(ageadj_excess), pct_yoy_change = pct_yoy_change_mag * direction) %>% ungroup() %>% filter(year > 1999) %>% group_by(name) %>% summarize(mean_pct_yoy_change = mean(ifelse(!is.finite(pct_yoy_change), NA, pct_yoy_change), na.rm = T) %>% round(., 2)) %>% ungroup() %>% arrange(desc(abs(mean_pct_yoy_change)))
+
+
 
 ###
 
