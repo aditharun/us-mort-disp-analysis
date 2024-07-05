@@ -124,24 +124,46 @@ ggsave(plot = top_half_fig1, filename = "results/decline-fig1.pdf", device = cai
 
 
 
+
+
 avg_change <- rbind(ageadj %>% select(year, gender, ageadj_excess, name), ageadj %>% select(year, gender, ageadj_excess, name) %>% left_join(overall_ageadj_changes %>% select(gender, year, excess_deaths_rate), by=c("gender"="gender", "year"="year")) %>% group_by(year, gender) %>% summarize(nc = sum(ageadj_excess), t = unique(excess_deaths_rate)) %>% ungroup() %>% mutate(Tail = t - nc) %>% select(year, gender, Tail) %>% mutate(name = "Tail") %>% magrittr::set_colnames(c("year", "gender", "ageadj_excess", "name"))) 
 
 
-#fit a linear model to also get confidence intervals
-get_lm_fits <- function(df){
+###
+#
+
+of <- overall_ageadj_changes %>% filter(gender == "Female") %>% filter(year < 2016) %>% select(year, change) %>% filter(year > 1999)
+
+avg_change %>% filter(gender == "Female") %>% filter(year < 2016) %>% group_by(name) %>% arrange(year) %>% mutate(change_specific = ageadj_excess - lag(ageadj_excess)) %>% ungroup() %>% filter(year > 1999) %>% left_join(of, by=c("year" = "year")) %>% mutate(frac = change_specific / change) %>% group_by(name) %>% summarize(pct = round(mean(frac)*100, 2)) %>% arrange(desc(pct))
+
+###
+
+###
+#mean annual changes in excess AAMR revealed that cancer (-3.97, 23.1%), heart disease (-2.20, 23%), accidents (-1.91), and HIV (-1.62) were primary contributors to this decline
+#
+om <- overall_ageadj_changes %>% filter(gender == "Male") %>% filter(year < 2012) %>% select(year, change) %>% filter(year > 1999)
+
+avg_change %>% filter(gender == "Male") %>% filter(year < 2012) %>% group_by(name) %>% arrange(year) %>% mutate(change_specific = ageadj_excess - lag(ageadj_excess)) %>% ungroup() %>% filter(year > 1999) %>% left_join(om, by=c("year" = "year")) %>% mutate(frac = change_specific / change) %>% group_by(name) %>% summarize(pct = round(mean(frac)*100, 2)) %>% arrange(desc(pct))
+
+###
+
+get_mean <- function(df){
 
 	slope <- coefficients(df %>% lm(ageadj_excess ~ year, .))[[2]]
 
-	ci <- (confint(df %>% lm(ageadj_excess ~ year, .), "year"))[1:2]
+	#ci <- (confint(df %>% lm(ageadj_excess ~ year, .), "year"))[1:2]
 
-	data.frame(slope = slope, lower = ci[1], upper = ci[2], gender = unique(df$gender), name = unique(df$name), plateau = unique(df$plateau))
+	#data.frame(slope = slope, lower = ci[1], upper = ci[2], gender = unique(df$gender), name = unique(df$name), plateau = unique(df$plateau))
+
+		data.frame(slope = slope, gender = unique(df$gender), name = unique(df$name), plateau = unique(df$plateau))
+
 }
 
 
 m_avg_stack <- avg_change %>% filter(gender == "Male") %>% filter(year < 2020) %>% mutate(plateau = ifelse(year <= 2011, "Decline", "Non-decline")) %>% group_by(gender, plateau, name) %>% group_split()
 
 
-m_avg_rate <- do.call(rbind, m_avg_stack %>% lapply(., function(df) get_lm_fits(df))) %>% as_tibble() 
+m_avg_rate <- do.call(rbind, m_avg_stack %>% lapply(., function(df) get_mean(df))) %>% as_tibble() 
 
 
 m_order.of.avg.names <- m_avg_rate %>% group_by(name) %>% summarize(diff = slope[plateau == "Decline"] - slope[plateau == "Non-decline"]) %>% arrange(diff) %>% pull(name) %>% rev()
@@ -152,7 +174,7 @@ m_avg_rate <- m_avg_rate %>% mutate(name = factor(name, levels = m_order.of.avg.
 
 f_avg_stack <- avg_change %>% filter(gender == "Female") %>% filter(year < 2020) %>% mutate(plateau = ifelse(year <= 2015, "Decline", "Non-decline")) %>% group_by(gender, plateau, name) %>% group_split()
 
-f_avg_rate <- do.call(rbind, f_avg_stack %>% lapply(., function(df) get_lm_fits(df))) %>% as_tibble() 
+f_avg_rate <- do.call(rbind, f_avg_stack %>% lapply(., function(df) get_mean(df))) %>% as_tibble() 
 
 f_order.of.avg.names <- f_avg_rate %>% group_by(name) %>% summarize(diff = slope[plateau == "Decline"] - slope[plateau == "Non-decline"]) %>% arrange(diff) %>% pull(name) %>% rev()
 
@@ -164,8 +186,6 @@ f_avg_rate <- f_avg_rate %>% mutate(name = factor(name, levels = f_order.of.avg.
 #(corresponding to Results "Notably, among males, mean annual changes in excess AAMR revealed that cancer (-3.97), heart disease (-2.20), accidents (-1.92), and HIV (-1.62) were primary contributors to this decline (Fig. 2A, navy bars). ")
 
 m_avg_rate %>% filter(plateau == "Decline") %>% arrange(desc(abs(slope))) %>% filter(name != "Tail")
-###
-
 
 
 ### 
@@ -196,14 +216,18 @@ m_avg_rate <- m_avg_rate %>% left_join(m_pct_change) %>% mutate(pct_change = rou
 
 f_avg_rate <- f_avg_rate %>% left_join(f_pct_change) %>% mutate(pct_change = round(pct_change, 0), abs_change = round(abs_change, 2))
 
+#+   geom_errorbar(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.8), width = 0.2, color = "grey60", size = 0.55) 
+
 fig2a <- m_avg_rate  %>% ggplot( aes(y = name, x = slope, fill = plateau)) +
     geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.75) +
-    labs(y = "", x = "Average Change in Annual Excess AAMR", fill = "") +   geom_errorbar(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.8), width = 0.2, color = "grey60", size = 0.55) + geom_text(aes(y=name, x=4, label = paste0("(", abs_change, ", ", pct_change, "%)")), size = 3.5) + 
+    labs(y = "", x = "Average Change in Annual Excess AAMR", fill = "") + geom_text(aes(y=name, x=4, label = paste0("(", abs_change, ", ", pct_change, "%)")), size = 3.5) + 
     theme_minimal() + theme(panel.border = element_rect(color = "black", fill = "transparent"), panel.grid = element_blank()) + geom_vline(xintercept = 0, color = "grey30") + theme(panel.grid.major.y = element_line(color = "grey90", linetype = "dashed", linewidth = 0.5)) + scale_fill_manual(values = c("Decline" = cpal[1], "Non-decline" = cpal[2]), labels = c("Decline" = "Overall Excess AAMR Decline (1999-2011)", "Non-decline" = "No Decline (2012-2019)"), guide = guide_legend(nrow = 2)) + ggtitle("Males") + theme(plot.title = element_text(size = 14, hjust = 0.5)) + theme(legend.position = "bottom") + theme(axis.text = element_text(size = 12), axis.title = element_text(size = 14), legend.text = element_text(size = 12)) + xlim(-5, 5)
+
+#+   geom_errorbar(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.8), width = 0.2, color = "grey60", size = 0.55)
 
 fig2b <- f_avg_rate %>% ggplot( aes(y = name, x = slope, fill = plateau)) +
     geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.75) +
-    labs(y = "", x = "Average Change in Annual Excess AAMR", fill = "") +   geom_errorbar(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.8), width = 0.2, color = "grey60", size = 0.55) + geom_text(aes(y=name, x=4, label = paste0("(", abs_change, ", ", pct_change, "%)")), size = 3.5) + 
+    labs(y = "", x = "Average Change in Annual Excess AAMR", fill = "")  + geom_text(aes(y=name, x=4, label = paste0("(", abs_change, ", ", pct_change, "%)")), size = 3.5) + 
     theme_minimal() + theme(panel.border = element_rect(color = "black", fill = "transparent"), panel.grid = element_blank()) + geom_vline(xintercept = 0, color = "grey30") + theme(panel.grid.major.y = element_line(color = "grey90", linetype = "dashed", linewidth = 0.5)) + scale_fill_manual(values = c("Decline" = cpal[1], "Non-decline" = cpal[2]), labels = c("Decline" = "Overall Excess AAMR Decline (1999-2015)", "Non-decline" = "No Decline (2016-2019)"), guide = guide_legend(nrow = 2)) + ggtitle("Females") + theme(plot.title = element_text(size = 14, hjust = 0.5)) + theme(legend.position = "bottom") + theme(axis.text = element_text(size = 12), axis.title = element_text(size = 14), legend.text = element_text(size = 12)) + xlim(-5, 5)
 
 fig2 <- plot_grid(fig2a, fig2b, nrow = 1, labels = c("A", "B"), label_size = 20)
